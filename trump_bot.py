@@ -66,7 +66,7 @@ while True:
     writeFile = open("out.txt","w")
     writeFile.write(response_content)
     localtime = time.localtime(time.time())
-    writeFile.write("Tweet sent on {}/{}/{}:\n{}".format(localtime.tm_mon,localtime.tm_mday,localtime.tm_year,sample)
+    writeFile.write("Tweet sent on {}/{}/{}:\n{}".format(localtime.tm_mon,localtime.tm_mday,localtime.tm_year,sample))
     writeFile.close()
     #print(response_content)
     #print("Tweet Sent:\n" + sample)
