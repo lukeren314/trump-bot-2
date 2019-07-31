@@ -1,5 +1,5 @@
 #trump_bot v 1.0
-import os,subprocess,json,requests,time,random,urllib,oauth2
+import os,subprocess,json,time,random,urllib,oauth2
 
 checkpoints = []
 for dirname,dirnames,filenames in os.walk("cv"):
@@ -57,7 +57,7 @@ while True:
     sample = sample[0:cutIndex]
     print("Return Value: "+str(return_value))
     # params["status"] = "@realDonaldTrump "+sample
-    status = urllib.quote(sample)
+    status = urllib.parse.quote(sample)
 
     response_content = tweet(status)
     readFile = open("out.txt","r")
