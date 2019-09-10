@@ -6,7 +6,8 @@ for dirname,dirnames,filenames in os.walk("cv"):
     for filename in filenames:
         checkpoints.append(filename)
 print("Available checkpoints: " + str(checkpoints))
-last_cv = checkpoints[0]
+checkpoints.sort()
+last_cv = checkpoints[-1]
 print("Using checkpoint: " + last_cv)
 auth_config = json.loads(open('config.json','r').read())
 
