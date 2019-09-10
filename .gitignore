@@ -2,4 +2,4 @@
 *.iso
 *.png
 *.json
-input.txt
+data/trumptweets/input.txt
