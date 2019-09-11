@@ -10,7 +10,7 @@ if args.checkpoint:
 		    ["th train.lua -gpuid -1 -init_from cv/{} -data_dir data/trumptweets -rnn_size 300 -num_layers 3 -eval_val_every 250 -dropout 0.5".format(args.checkpoint[0])],shell=True)
 else:
 	subprocess.call(
-	    ["th train.lua -gpuid -1 -data_dir data/trumptweets -rnn_size 300 -num_layers 3 -eval_val_every 250 -dropout 0.5"],shell=True)
+	    ["th train.lua -gpuid -1 -data_dir data/trumptweets -rnn_size 256 -num_layers 4 -eval_val_every 250 -dropout 0.5"],shell=True)
 # checkpoints = []
 # for dirname,dirnames,filenames in os.walk("cv"):
 #     for filename in filenames:
