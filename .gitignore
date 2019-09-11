@@ -2,4 +2,6 @@
 *.iso
 *.png
 *.json
+*.pem
+*.ppk
 data/trumptweets/input.txt
