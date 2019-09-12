@@ -42,7 +42,7 @@ while True:
     # int(time.time())
     rand_letter = str(random.choice(alph)).capitalize()
     return_value = subprocess.call("th sample.lua cv/"+last_cv+" -gpuid -1 -length 120 -seed -" +
-                                   str(int(time.time()))+" -primetext -"+rand_letter, shell=True)
+                                   str(int(time.time()))+" -primetext -"+rand_letter, shell=True, stdout=open("sample.txt", "w"))
     sample = rand_letter+open("sample.txt", "r").read()
     print("\nSample Taken!\n")
     cutIndex = 120
